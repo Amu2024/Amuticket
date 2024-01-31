@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticketverkauf</title>
+</head>
+<body>
+
+  <h1>Online Ticketverkauf</h1>
+
+  <form id="ticketForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="date">Termin:</label>
+    <select id="date" required>
+      <option value="termin1">Termin 1</option>
+      <option value="termin2">Termin 2</option>
+      <option value="termin3">Termin 3</option>
+    </select>
+
+    <label for="quantity">Anzahl Tickets:</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <button type="button" onclick="submitOrder()">Bestellung abschicken</button>
+  </form>
+
+  <script>
+    function submitOrder() {
+      const name = document.getElementById('name').value;
+      const date = document.getElementById('date').value;
+      const quantity = document.getElementById('quantity').value;
+
+      // Hier müsste der Code für die Bestellverarbeitung und E-Mail-Versand hinzugefügt werden
+      // Dies kann mit einer serverseitigen Sprache wie PHP oder Node.js geschehen
+      // Beispiel: fetch('server-endpoint.php', { method: 'POST', body: JSON.stringify({ name, date, quantity }) });
+
+      alert(`Bestellung erfolgreich!\nName: ${name}\nTermin: ${date}\nAnzahl Tickets: ${quantity}`);
+    }
+  </script>
+
+</body>
+</html>
